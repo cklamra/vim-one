@@ -364,7 +364,11 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('CursorLine',   '',              s:syntax_cursor,  'none')
   call <sid>X('Directory',    s:hue_2,         '',               '')
   call <sid>X('ErrorMsg',     s:hue_5,         s:syntax_bg,      'none')
-  call <sid>X('VertSplit',    s:syntax_bg, s:syntax_cursor,  '')
+  if (has('nvim'))
+    call <sid>X('VertSplit',    s:syntax_cursor, s:syntax_bg,  '')
+  else
+    call <sid>X('VertSplit',    s:syntax_bg, s:syntax_cursor,  '')
+  endif
   call <sid>X('Folded',       s:syntax_fg,     s:syntax_bg,      'none')
   call <sid>X('FoldColumn',   s:mono_3,        s:syntax_cursor,  '')
   call <sid>X('IncSearch',    s:hue_6,         '',               '')
@@ -385,8 +389,8 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('Whitespace',   s:special_grey,  '',               'none')
   call <sid>X('StatusLine',   s:syntax_fg,     s:syntax_cursor,  'none')
   call <sid>X('StatusLineNC', s:special_grey,        '',               '')
-  call <sid>X('TabLine',      s:mono_2,        s:visual_grey,    'none')
-  call <sid>X('TabLineFill',  s:mono_3,        s:visual_grey,    'none')
+  call <sid>X('TabLine',      s:syntax_bg,        s:visual_grey,    'none')
+  call <sid>X('TabLineFill',  s:syntax_bg,        s:visual_grey,    'none')
   call <sid>X('TabLineSel',   s:syntax_bg,     s:hue_2,          '')
   call <sid>X('Title',        s:syntax_fg,     '',               'bold')
   call <sid>X('Visual',       '',              s:visual_grey,    '')
