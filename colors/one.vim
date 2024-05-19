@@ -297,10 +297,12 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
     let s:mono_3 = ['#5c6370', '59']
     let s:mono_4 = ['#4b5263', '59']
 
-    let s:hue_1  = ['#56b6c2', '73'] " cyan
-    let s:hue_2  = ['#61afef', '75'] " blue
-    let s:hue_3  = ['#c678dd', '176'] " purple
-    let s:hue_4  = ['#98c379', '114'] " green
+    let s:hue_1   = ['#56b6c2', '73']  " cyan
+    let s:hue_2   = ['#61afef', '75']  " blue
+    let s:hue_2_2 = ['#4078f2', '33']  " blue 2
+    let s:hue_3   = ['#c678dd', '176'] " purple
+    let s:hue_4   = ['#98c379', '114'] " green
+    let s:hue_4_2 = ['#50a14f', '71']  " green 2
 
     let s:hue_5   = ['#e06c75', '168'] " red 1
     let s:hue_5_2 = ['#be5046', '130'] " red 2
@@ -324,10 +326,12 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
     let s:mono_3 = ['#a0a1a7', '145']
     let s:mono_4 = ['#c2c2c3', '250']
 
-    let s:hue_1  = ['#0184bc', '31'] " cyan
-    let s:hue_2  = ['#4078f2', '33'] " blue
-    let s:hue_3  = ['#a626a4', '127'] " purple
-    let s:hue_4  = ['#50a14f', '71'] " green
+    let s:hue_1   = ['#0184bc', '31']  " cyan
+    let s:hue_2   = ['#4078f2', '33']  " blue
+    let s:hue_2_2 = ['#61afef', '75']  " blue 2
+    let s:hue_3   = ['#a626a4', '127'] " purple
+    let s:hue_4   = ['#50a14f', '71']  " green
+    let s:hue_4_2 = ['#98c379', '114'] " green 2
 
     let s:hue_5   = ['#e45649', '166'] " red 1
     let s:hue_5_2 = ['#ca1243', '160'] " red 2
@@ -389,10 +393,10 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('Whitespace',   s:special_grey,  '',               'none')
   call <sid>X('StatusLine',   s:syntax_fg,     s:syntax_cursor,  'none')
   call <sid>X('StatusLineNC', s:special_grey,        '',               '')
-  call <sid>X('TabLine',      s:syntax_bg,        s:visual_grey,    'none')
-  call <sid>X('TabLineFill',  s:syntax_bg,        s:visual_grey,    'none')
-  call <sid>X('TabLineSel',   s:syntax_bg,     s:hue_2,          '')
-  call <sid>X('Title',        s:syntax_fg,     '',               'bold')
+  call <sid>X('TabLine',      s:syntax_fg,        s:syntax_cursor,    'none')
+  call <sid>X('TabLineFill',  s:syntax_fg,        s:syntax_cursor,    'none')
+  call <sid>X('TabLineSel',   s:syntax_bg,     s:hue_4,          '')
+  call <sid>X('Title',        s:syntax_bg,     '',               'bold')
   call <sid>X('Visual',       '',              s:visual_grey,    '')
   call <sid>X('VisualNOS',    '',              s:visual_grey,    '')
   call <sid>X('WarningMsg',   s:hue_5,         '',               '')
