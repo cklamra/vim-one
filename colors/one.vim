@@ -387,6 +387,9 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('PMenuSel',     s:syntax_bg,     s:mono_2,         'bold')
   call <sid>X('PMenuSbar',    s:mono_2,        s:syntax_bg,   '') " special_grey
   call <sid>X('PMenuThumb',   s:syntax_fg,              s:mono_2,         '')
+  call <sid>X('CocMenuSel',   s:syntax_bg,     s:mono_2,         'bold')
+  call <sid>X('CocSearch',    s:hue_2,         '',               '')
+  call <sid>X('CocFloatThumb',s:syntax_fg,     s:syntax_fg,      '')
   call <sid>X('Question',     s:hue_2,         '',               '')
   call <sid>X('Search',       s:syntax_bg,     s:hue_6_2,        '')
   call <sid>X('SpecialKey',   s:special_grey,  '',               'none')
