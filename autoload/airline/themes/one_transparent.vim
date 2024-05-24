@@ -76,7 +76,7 @@ let g:airline#themes#one_transparent#palette.normal = {
     \ 'airline_c': s:N3,
     \ 'airline_x': s:N3,
     \ 'airline_y': s:N3,
-    \ 'airline_z': s:N3}
+    \ 'airline_z': s:N1}
 
 let g:airline#themes#one_transparent#palette.normal_modified = {
     \ 'airline_a': s:NM1,

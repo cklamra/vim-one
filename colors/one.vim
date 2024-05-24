@@ -383,10 +383,10 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('ModeMsg',      s:syntax_fg,     '',               '')
   call <sid>X('MoreMsg',      s:syntax_fg,     '',               '')
   call <sid>X('NonText',      s:mono_3,        '',               'none')
-  call <sid>X('PMenu',        '',              s:pmenu,          '')
-  call <sid>X('PMenuSel',     '',              s:mono_4,         '')
-  call <sid>X('PMenuSbar',    '',              s:syntax_bg,      '')
-  call <sid>X('PMenuThumb',   '',              s:mono_1,         '')
+  call <sid>X('PMenu',        '',              s:syntax_bg,      '')
+  call <sid>X('PMenuSel',     s:syntax_bg,     s:mono_2,         'bold')
+  call <sid>X('PMenuSbar',    s:mono_2,        s:syntax_bg,   '') " special_grey
+  call <sid>X('PMenuThumb',   s:syntax_fg,              s:mono_2,         '')
   call <sid>X('Question',     s:hue_2,         '',               '')
   call <sid>X('Search',       s:syntax_bg,     s:hue_6_2,        '')
   call <sid>X('SpecialKey',   s:special_grey,  '',               'none')
@@ -395,7 +395,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('StatusLineNC', s:syntax_cursor,        '',               '')
   call <sid>X('TabLine',      s:special_grey,        s:syntax_bg,    'none')
   call <sid>X('TabLineFill',  s:special_grey,        s:syntax_bg,    'none')
-  call <sid>X('TabLineSel',   s:syntax_bg,     s:hue_4,          '')
+  call <sid>X('TabLineSel',   s:syntax_bg,     s:mono_2,          '') "hue_4
   call <sid>X('Title',        s:special_grey,     '',               'bold')
   call <sid>X('Visual',       '',              s:visual_grey,    '')
   call <sid>X('VisualNOS',    '',              s:visual_grey,    '')
