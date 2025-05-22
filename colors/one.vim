@@ -299,22 +299,22 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
 
     let s:hue_1   = ['#56b6c2', '73']  " cyan
     let s:hue_2   = ['#61afef', '75']  " blue
-    let s:hue_2_2 = ['#4078f2', '33']  " blue 2
-    let s:hue_3   = ['#c678dd', '176'] " purple
+    let s:hue_2_2 = ['#4078f2', '33']  " blue (dark)
+    let s:hue_3   = ['#c678dd', '176'] " magenta
     let s:hue_4   = ['#98c379', '114'] " green
-    let s:hue_4_2 = ['#50a14f', '71']  " green 2
+    let s:hue_4_2 = ['#50a14f', '71']  " green (dark)
 
-    let s:hue_5   = ['#e06c75', '168'] " red 1
-    let s:hue_5_2 = ['#be5046', '130'] " red 2
+    let s:hue_5   = ['#e06c75', '168'] " red
+    let s:hue_5_2 = ['#be5046', '130'] " red (dark)
 
-    let s:hue_6   = ['#d19a66', '173'] " orange 1
-    let s:hue_6_2 = ['#e5c07b', '180'] " orange 2
+    let s:hue_6   = ['#d19a66', '173'] " yellow (dark)
+    let s:hue_6_2 = ['#e5c07b', '180'] " yellow
 
-    let s:syntax_bg     = ['#1e1e1e', '16']
+    let s:syntax_bg     = ['#1d1d20', '16']
     let s:syntax_gutter = ['#636d83', '60']
     let s:syntax_cursor = ['#2d2d2d', '16']
 
-    let s:syntax_accent = ['#528bff', '69']
+    " let s:syntax_accent = ['#4078f2', '69']
 
     let s:vertsplit    = ['#181a1f', '233']
     let s:special_grey = ['#3b4048', '16']
@@ -327,24 +327,24 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
     let s:mono_4 = ['#c2c2c3', '250']
 
     let s:hue_1   = ['#0184bc', '31']  " cyan
-    let s:hue_2   = ['#4078f2', '33']  " blue
-    let s:hue_2_2 = ['#61afef', '75']  " blue 2
-    let s:hue_3   = ['#a626a4', '127'] " purple
-    let s:hue_4   = ['#50a14f', '71']  " green
-    let s:hue_4_2 = ['#98c379', '114'] " green 2
+    let s:hue_2   = ['#4078f2', '33']  " blue (dark)
+    let s:hue_2_2 = ['#61afef', '75']  " blue
+    let s:hue_3   = ['#a626a4', '127'] " magenta
+    let s:hue_4   = ['#50a14f', '71']  " green (dark)
+    let s:hue_4_2 = ['#98c379', '114'] " green
 
-    let s:hue_5   = ['#e45649', '166'] " red 1
-    let s:hue_5_2 = ['#ca1243', '160'] " red 2
+    let s:hue_5   = ['#e45649', '166'] " red
+    let s:hue_5_2 = ['#ca1243', '160'] " red (dark)
 
-    let s:hue_6   = ['#986801', '94'] " orange 1
-    let s:hue_6_2 = ['#c18401', '136'] " orange 2
+    let s:hue_6   = ['#986801', '94']  " yellow (dark)
+    let s:hue_6_2 = ['#c18401', '136'] " yellow
 
-    let s:syntax_bg     = ['#ffffff', '255']
+    let s:syntax_bg     = ['#fafafb', '255']
     let s:syntax_gutter = ['#9e9e9e', '247']
     let s:syntax_cursor = ['#f0f0f0', '254']
 
-    let s:syntax_accent = ['#526fff', '63']
-    let s:syntax_accent_2 = ['#0083be', '31']
+    " let s:syntax_accent = ['#4078f2', '33']
+    " let s:syntax_accent_2 = ['#0184bc', '31']
 
     let s:vertsplit    = ['#e7e9e1', '188']
     let s:special_grey = ['#d3d3d3', '251']
@@ -362,7 +362,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('bold',         '',              '',               'bold')
   call <sid>X('ColorColumn',  '',              s:syntax_cursor,  '')
   call <sid>X('Conceal',      s:mono_4,        s:syntax_bg,      '')
-  call <sid>X('Cursor',       '',              s:syntax_accent,  '')
+  call <sid>X('Cursor',       '',              s:hue_2,  '')
   call <sid>X('CursorIM',     '',              '',               '')
   call <sid>X('CursorColumn', '',              s:syntax_cursor,  '')
   call <sid>X('CursorLine',   '',              s:syntax_cursor,  'none')
@@ -385,8 +385,8 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('NonText',      s:mono_3,        '',               'none')
   call <sid>X('PMenu',        '',              s:syntax_bg,      '')
   call <sid>X('PMenuSel',     s:syntax_bg,     s:mono_2,         'bold')
-  call <sid>X('PMenuSbar',    s:mono_2,        s:syntax_bg,   '') " special_grey
-  call <sid>X('PMenuThumb',   s:syntax_fg,              s:mono_2,         '')
+  call <sid>X('PMenuSbar',    s:mono_2,        s:syntax_bg,      '') " special_grey
+  call <sid>X('PMenuThumb',   s:syntax_fg,     s:mono_2,         '')
   call <sid>X('CocMenuSel',   s:syntax_bg,     s:mono_2,         'bold')
   call <sid>X('CocSearch',    s:hue_2,         '',               '')
   call <sid>X('CocFloatThumb',s:syntax_fg,     s:syntax_fg,      '')
@@ -395,11 +395,11 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('SpecialKey',   s:special_grey,  '',               'none')
   call <sid>X('Whitespace',   s:special_grey,  '',               'none')
   call <sid>X('StatusLine',   s:syntax_fg,     s:syntax_cursor,  'none')
-  call <sid>X('StatusLineNC', s:syntax_cursor,        '',               '')
-  call <sid>X('TabLine',      s:special_grey,        s:syntax_bg,    'none')
-  call <sid>X('TabLineFill',  s:special_grey,        s:syntax_bg,    'none')
-  call <sid>X('TabLineSel',   s:syntax_bg,     s:mono_2,          '') "hue_4
-  call <sid>X('Title',        s:special_grey,     '',               'bold')
+  call <sid>X('StatusLineNC', s:syntax_cursor, '',               '')
+  call <sid>X('TabLine',      s:special_grey,  s:syntax_bg,      'none')
+  call <sid>X('TabLineFill',  s:special_grey,  s:syntax_bg,      'none')
+  call <sid>X('TabLineSel',   s:syntax_bg,     s:mono_2,         '') "hue_4
+  call <sid>X('Title',        s:special_grey,  '',               'bold')
   call <sid>X('Visual',       '',              s:visual_grey,    '')
   call <sid>X('VisualNOS',    '',              s:visual_grey,    '')
   call <sid>X('WarningMsg',   s:hue_5,         '',               '')
@@ -430,7 +430,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('Conditional',    s:hue_3,         '',          '')
   call <sid>X('Repeat',         s:hue_3,         '',          '')
   call <sid>X('Label',          s:hue_3,         '',          '')
-  call <sid>X('Operator',       s:syntax_accent, '',          'none')
+  call <sid>X('Operator',       s:hue_2,         '',          'none')
   call <sid>X('Keyword',        s:hue_5,         '',          '')
   call <sid>X('Exception',      s:hue_3,         '',          '')
   call <sid>X('PreProc',        s:hue_6_2,       '',          '')
